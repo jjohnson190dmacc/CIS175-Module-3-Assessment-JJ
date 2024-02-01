@@ -19,6 +19,7 @@ public class RunProgram {
 		try {
 			startMenu();
 		} catch (Exception e) {
+			System.out.println();
 			System.out.println("Invalid selection, program terminated.");
 		} finally {
 			iH.closeIH();
@@ -61,8 +62,8 @@ public class RunProgram {
 				showList();
 
 			} else if (userChoice == 5) {
-				iH.closeIH();
-				in.close();
+				//iH.closeIH();
+				//in.close();
 				exitProgram = true;
 
 			} else {
@@ -81,7 +82,7 @@ public class RunProgram {
 		// TODO Auto-generated method stub
 		System.out.print("Please enter the Make of the vehicle: ");
 		String make = in.nextLine();
-		System.out.print("Please enter the model of the vehicle: ");
+		System.out.print("Please enter the Model of the vehicle: ");
 		String model = in.nextLine();
 		
 		DealerInventory inventoryToAdd = new DealerInventory(make,model);
